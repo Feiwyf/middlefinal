@@ -1,0 +1,95 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* 最底層 */
+}
+
+nav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2; /* 最上層 */
+}
+
+/* 選單的基本樣式 */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+  border-radius: 10px; /* 圓角效果 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* 添加陰影 */
+}
+
+/* 選單項目 */
+.menu li {
+  margin: 0 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ffffff; /* 白色文字 */
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s; /* 添加過渡效果 */
+}
+
+/* 選單項目懸停效果 */
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.2); /* 半透明白色背景 */
+  color: #ffcc00; /* 黃色文字 */
+}
+
+/* 子選單樣式 */
+.submenu {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  position: absolute;
+  display: none;
+  background: rgba(0, 0, 0, 0.8); /* 深色背景 */
+  border-radius: 5px;
+}
+
+.submenu li {
+  margin: 5px 0;
+}
+
+.submenu a {
+  color: #ffffff; /* 白色文字 */
+  padding: 5px 10px;
+  display: block;
+}
+
+.submenu a:hover {
+  background: rgba(255, 255, 255, 0.2); /* 半透明白色背景 */
+  color: #ffcc00; /* 黃色文字 */
+}
+
+/* 顯示子選單 */
+.menu li:hover .submenu {
+  display: block;
+}
+
+#content-frame {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.2); /* 背景透明度為 0.2 */
+  z-index: 1; /* 第二層 */
+  border: none;
+}
